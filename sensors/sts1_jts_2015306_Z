@@ -1,0 +1,21 @@
+# @(#)sts1_coef	1.4 12/15/95
+# STS1 response coef file, relative to velocity
+1             # filter type
+5             # num of zeroes
+6            # num of poles
+0.0           # sample interval
+1             # decimation factor
+1.3819519e+01 # leading factor
+1.0           # gain
+
+0.0 0.0
+0.0 0.0
+-12.50 0.0
+-2.4271845e-02 0.0
+-2.4271845e-02 0.0
+-2.0067348e-03 1.7107398e-03
+-2.0067348e-03 -1.7107398e-03
+-2.3537192e-02 6.7733319e-03
+-2.3537192e-02 -6.7733319e-03
+-6.3075250e+00 1.1685331e+01
+-6.3075250e+00 -1.1685331e+01

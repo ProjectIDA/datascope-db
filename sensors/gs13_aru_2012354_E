@@ -1,0 +1,11 @@
+0x8001  # type 0x8001 = analog
+2       # number of zeros
+2       # number of poles
+
+# zeros
+ 0.00000E+00,  0.00000E+00
+ 0.00000E+00,  0.00000E+00
+
+# poles
+-8.05755E-01,  6.37986E-01
+-8.05755E-01, -6.37986E-01

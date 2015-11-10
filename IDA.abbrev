@@ -1,0 +1,29 @@
+II     (GSN) Global Seismograph Network (IRIS/IDA)       
+ASKHP  Askania horizontal pendulum                       
+MAG-03 Bartington MAG-03MSESL100 magnetometer            
+STRAIN Cambridge Invar wire strainmeter                  
+SG-056 GWR Dual Sphere Superconducting Gravimeter        
+GS13   Geotech GS-13 Seismometer                         
+K54000 Geotech KS-54000 Borehole Seismometer             
+3ESPC  Guralp CMG-3ESP Compact Seismometer               
+CMG3T  Guralp CMG-3T Seismometer                         
+CMG1   Guralp CMG1 Seismometer                           
+TILT   Horsfall long-baseline fluid tilt                 
+FBAEST Kinemetrics Episensor ES-T                        
+FBA23  Kinemetrics FBA-23 Low-Gain Sensor                
+LRGRAV La Coste-Romberg Gravimeter                       
+TRI_PH Nanometrics Trillium 120 Posthole BB Seismometer  
+TR240  Nanometrics Trillium 240 Seismometer              
+PARO   Paroscientific microbarograph                     
+FLXMAG Rasmusen FGE Fluxgate magnetometer                
+BM-G   Relative Microbarograph, BM-G                     
+SETRA  Setra Barometric Pressure Transducer model 270    
+STS1E3 Streckeisen STS-1 Seismometer with Metrozet E300  
+STS1HB Streckeisen STS-1H/VBB Seismometer                
+STS1VB Streckeisen STS-1V/VBB Seismometer                
+STS2   Streckeisen STS-2 Seismometer                     
+STS2_5 Streckeisen STS-2.5 Seismometer                   
+STS-5A Streckeisen STS-5A Seismometer                    
+M2166V Metrozet M2166-VBV Seismometer                    
+M2166H Metrozet M2166-VBH Seismometer                    
+Q330HR Quanterra Q330-HR digitizer                       

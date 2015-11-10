@@ -1,0 +1,503 @@
+Schema ida1.0
+    Description ( "IDA Schema Version 1.0" )
+    Detail {
+        IDA DCC process control database
+    }
+    Timedate lddate
+    ;
+
+Attribute chn
+    String (8)
+    Format ( "%-8s" )
+    Null ( "-" )
+    Description ( "channel" )
+    Detail {
+        This is an eight-character stream code, which, taken together
+        with sta, jdate and time, uniquely identifies the source
+        of the seismic data, including the geographic location,
+        spatial orientation, sensor and subsequent data
+        processing.  This name includes the location code (eg. bhz00).
+    }
+    ;
+
+Attribute flag
+    String (2)
+    Format ( "%-2s" )
+    Null ( "-" )
+    Description ( "C for continuous, T for triggered + G for geophysical, W for weather " )
+    Detail {
+            This is a one to two character flag used in SEED blockette 52.
+    }
+    ;
+
+Attribute desc
+    String (50)
+    Format ( "%-50s" )
+    Null ( "-" )
+    Description ( "item description" )
+    Detail {
+        This is a character string describing the item.
+    }
+    ;
+
+Attribute decifac
+    Integer (8)
+    Format ( "%8ld" )
+    Null ( "-1" )
+    Range ( "decifac > -1" )
+    Description ( "decimation factor" )
+    Detail {
+        The decimation factor of the input sample rate for digital
+        filters.
+    }
+    ;
+
+Attribute dfile
+    String (32)
+    Format ( "%-32s" )
+    Null ( "-" )
+    Description ( "data file" )
+    Detail {
+        A file name (see dir)
+    }
+    ;
+
+Attribute dir
+    String (64)
+    Format ( "%-64s" )
+    Null ( "-" )
+    Description ( "directory" )
+    Detail {
+        This attribute is the directory-part of a path name.
+        Relative path names or '.' (dot), the notation for the
+        current directory, may be used. Used together with dfile
+        to generate complete path names.
+    }
+    ;
+
+Attribute edepth
+    Real (9)
+    Format ( "%9.4f" )
+    Null ( "-9.9999" )
+    Range ( "edepth >= 0.0" )
+    Units ( "kilometers" )
+    Description ( "emplacement depth" )
+    Detail {
+        This attribute gives the depth in kilometers at which
+        the instrument is positioned, relative to the value of
+        elev in the site relation.
+    }
+    ;
+
+Attribute elev
+    Real (9)
+    Format ( "%9.4f" )
+    Null ( "-999.0000" )
+    Range ( "elev >= -10.0 && elev <= 10.0" )
+    Units ( "Kilometers" )
+    Description ( "elevation" )
+    Detail {
+        This attribute is the elevation of a seismic station
+        relative to mean sea level.
+    }
+    ;
+
+Attribute endt 
+    Time (17)
+    Format ( "%17.5f" )
+    Null ( "9999999999.99900" )
+    Units ( "Epochal seconds" )
+    Range ( "begt <= endt" ) 
+    Description ( "last valid time for data" ) 
+    Detail {
+        In wfdisc, this attribute is the time of the last sample
+        in the waveform file.  endt is equivalent to
+        begt+(nsamp-1)/srate.  In sensor, this is the last time
+        the data in the record are valid.
+    }
+    ;
+
+Attribute gcalib
+    Real (10)
+    Format ( "%10.6f" )
+    Null ( "0.000000" )
+    Range ( "gcalib > -1e99" )
+    Description ( "correction to scale factor" )
+    Detail {
+        This is the correction to the nominal scaling factor of
+        this stage.  gnom multiplied by gcalib yields the exact
+        scale factor for the stage.  gcalib is dimensionless.
+    }
+    ;
+
+Attribute gnom
+    Real (11)
+    Format ( "%11.5g" )
+    Null ( "0" )
+    Range ( "gnom > -1e99" )
+    Description ( "nominal scaling factor" )
+    Detail {
+        This is the nominal scaling factor of this stage.  It can
+        have units associated with it if the stage is a sensor or
+        have no units if the stage is a filter or amplifier.
+    }
+    ;
+
+Attribute hang
+    Real (6)
+    Format ( "%6.1f" )
+    Null ( "-999.9" )
+    Range ( "hang >= 0.0 && hang <= 360.0" )
+    Units ( "Degrees" )
+    Description ( "horizontal angle" )
+    Detail {
+        This attribute specifies the orientation of the
+        seismometer in the horizontal plane, measured clockwise
+        from North.  For a North-South orientation with the
+        seismometer pointing toward the north, hang=0.; for
+        East-West orientation with the seismometer pointing toward
+        the west, hang=270.  See vang.
+    }
+    ;
+
+Attribute instype
+    String (6)
+    Format ( "%-6s" )
+    Null ( "-" )
+    Description ( "instrument code" )
+    Detail {
+        This character string is used to indicate the instrument
+        type.  Some examples are: SRO, ASRO, DWWSSN, LRSM, and
+        S-750.
+    }
+    ;
+
+Attribute item
+    String (6)
+    Format ( "%-6s" )
+    Null ( "-" )
+    Description ( "item code" )
+    Detail {
+        This character string is used as a shorthand name of
+        the item.  Some examples are II, STS1VB.
+    }
+    ;
+
+Attribute iunits
+    String (16)
+    Format ( "%-16s" )
+    Null ( "-" )
+    Description ( "inputs units of stage (e.g. V, cm/sec, ...)" )
+    Detail {
+        This is the input units which are appropriate for the
+        stage.  For a seismometer the input units may be m/sec or
+        cm/sec, for a analog-to-digital converter the input units
+        will be V.
+    }
+    ;
+
+Attribute izero
+    Integer (8)
+    Format ( "%8ld" )
+    Null ( "0" )
+    Range ( "izero >= 0" )
+    Description ( "index of FIR coeff. for 0th sample" )
+    Detail {
+        Index within fir coefficients corresponding to the 0th
+        sample.  This is needed for asymetric FIR filters, or
+        filters that are causal.
+    }
+    ;
+
+
+Attribute lat
+    Real (9)
+    Format ( "%9.4f" )
+    Null ( "-999.0000" )
+    Range ( "lat >= -90.0 && lat <= 90.0" ) 
+    Units ( "Degrees" )
+    Description ( "estimated latitude" )
+    Detail {
+        This attribute is the geographic latitude.  Locations
+        north of the equator have positive latitudes.
+    }
+    ;
+
+Attribute lddate
+    Time (17)
+    Format ( "%17.5f" )
+    Null ( "-9999999999.99900" )
+    Units ( "Seconds" )
+    Description ( "(epoch) time of last record modification" )
+    Detail {
+        This is the last time the record was modified.
+    }
+    ;
+
+Attribute leadfac
+    Real (11)
+    Format ( "%11.7lg" )
+    Null ( "0.0000000" )
+    Range ( "leadfac > 0.0" )
+    Description ( "leading factor" )
+    Detail {
+        This factor makes the response unity at period nomfreq.
+    }
+    ;
+
+Attribute loc
+        String (2)
+        Format ( "%-2s" )
+        Null ( "-" )
+        Description ( "SEED location code" )
+        Detail {
+                This is a two-character code, which, is used to create
+                the location to be used with the SEED version that requires
+                location codes.
+        }
+        ;
+
+Attribute lon
+    Real (9)
+    Format ( "%9.4f" )
+    Null ( "-999.0000" )
+    Range ( "lon >= -180.0 && lon <= 180.0" )
+    Units ( "Degrees" )
+    Description ( "estimated longitude" )
+    Detail {
+        This attribute is the geographic longitude in degrees.
+        Longitudes are measured positive east of the Greenwich
+        meridian.
+    }
+    ;
+
+Attribute nomfreq
+    Real (16)
+    Format ( "%16.6f" )
+    Null ( "-1.000000" )
+    Range ( "nomfreq >= 0.0" )
+    Units ( "Hz" )
+    Description ( "nominal calibration frequency" )
+    Detail {
+        This attribute is the frequency for which leadfac makes the response unity.
+    }
+    ;
+
+Attribute ounits
+    String (16)
+    Format ( "%-16s" )
+    Null ( "-" )
+    Description ( "output units of stage (e.g. V, counts, ...)" )
+    Detail {
+        This is the output units which are appropriate for the
+        stage.  For a seismometer the output units will be V, for
+        a analog-to-digital converter the output units will be
+        counts.
+    }
+    ;
+
+Attribute seedchn
+    String (6)
+    Format ( "%-6s" )
+    Null ( "-" )
+    Description ( "SEED channel" )
+    Detail {
+        This is the channel part of the stream name (the other part
+        being the location code).
+    }
+    ;
+
+Attribute srate
+    Real (11)
+    Format ( "%11.7f" )
+    Null ( "-1.0000000" )
+    Range ( "srate >= 0.0" )
+    Units ( "1/seconds" )
+    Description ( "sampling rate in samples/sec" )
+    Detail {
+        This attribute is the sample rate in samples/second.  In
+        the instrument relation this is specifically the nominal
+        sample rate, not accounting for clock drift.  In wfdisc,
+        the value may vary slightly from the nominal to reflect
+        clock drift.
+
+        Some special channels, like log channels, have this set to zero.
+    }
+    ;
+
+Attribute ssident
+    String (16)
+    Format ( "%-16s" )
+    Null ( "-" )
+    Description ( "identifier (sensor ser no/sw revision)" )
+    Detail {
+        This is the serial number of the sensor, the software
+        revision level, or other identifier.
+    }
+    ;
+
+Attribute sta
+    String (6)
+    Format ( "%-6s" )
+    Null ( "-" )
+    Description ( "station" )
+    Detail {
+        This is the common code-name of a seismic observatory. 
+        Generally only three or four characters are used.
+    }
+    ;
+
+Attribute stageid
+    Integer (8)
+    Format ( "%8ld" )
+    Null ( "-1" )
+    Range ( " 0 < stageid " )
+    Description ( "stage number in the calibration response" )
+    Detail {
+        The ordered stage number of this discrete stage in the
+        calibration response.  Each individual stage corresponds
+        to a sensor, analog filter, A/D converter, or FIR filter.
+        The numbering scheme for a seismic system will generally
+        assign stageid=1 for the sensor, stageid=2 for the
+        anti-alias filter, stageid=3 for the analog-to-digital
+        converter, stageid=4 for the first FIR filter, ...
+    }
+    ;
+
+Attribute staname
+    String (50)
+    Format ( "%-50s" )
+    Null ( "-" )
+    Description ( "station description" )
+    Detail {
+        This is the full name of the station whose code-name is in
+        sta.  As an example, one record in the site relation
+        connects sta = ANMO to staname = ALBUQUERQUE, NEW MEXICO
+        (SRO).
+    }
+    ;
+
+Attribute begt
+    Time (17)
+    Format ( "%17.5f" )
+    Null ( "-9999999999.99900" )
+    Units ( "Seconds" )
+    Description ( "epoch time" )
+    Detail {
+        Epochal time given as seconds and fractions of a second
+        since hour 0 January 1, 1970, and stored in a double
+        precision floating number.  Refers to the relation data
+        object with which it is found.  E.g., in arrival - arrival
+        time; in origin - origin time; in wfdisc, - start time of
+        data.  Where date of historical events is known, begt is
+        set to the start time of that date; where the date of
+        contemporary arrival measurements is known but no time is
+        given, then the begt attribute is set to the NA value. 
+        The double-precision floating point number allows 15
+        decimal digits.  At 1 millisecond accuracy this is a range
+        of 3 years.  Where time is unknown, or prior to Feb.  10,
+        1653, set to the NA value.
+    }
+    ;
+
+Attribute vang
+    Real (6)
+    Format ( "%6.1f" )
+    Null ( "-999.9" )
+    Range ( "vang >= 0.0 && vang <= 180.0" )
+    Units ( "Degrees" )
+    Description ( "vertical angle" )
+    Detail {
+        This attribute measures the angle between the sensitive
+        axis of a seismometer and the outward-pointing vertical
+        direction.  For a vertically oriented seismometer, vang =
+        0, or 180 (to reverse the sense of the instrument).  For a
+        horizontally oriented seismometer, vang = 90.  See hang.
+    }
+    ;
+
+Attribute unit
+    String (16)
+    Format ( "%-16s" )
+    Null ( "-" )
+    Description ( "units abbreviation" )
+    Detail {
+        This character string is used as a shorthand name of
+        units of measure. 
+    }
+    ;
+
+Relation site
+    Fields (  sta begt endt lat lon elev staname lddate )
+    Primary (  sta begt::endt )
+    Description ( "Station location information" )
+    Detail {
+        Site names and describes a point on the earth where
+        seismic measurements are made ( e.g.  the location of a
+        seismic instrument or array).  It contains information
+        that normally changes infrequently, such as location.  In
+        addition, site contains fields to describe the offset of a
+        station relative to an array reference location.  Global
+        data integrity implies that the sta/ondate in site be
+        consistent with the sta/chan/ondate in sitechan.
+    }
+    ;
+
+Relation stage
+    Fields (  sta chn loc begt endt stageid ssident gnom gcalib iunits ounits izero decifac srate leadfac dir dfile lddate )
+    Primary (  sta chn loc stageid begt::endt )
+    Description ( "filter stage calibration parameters" )
+    Detail {
+        Information characterizing an individual stage of the
+        total calibration of a station-channel.  Stageid provides
+        the specific ordering in the system response for the
+        stage.  gnom, gcalib, and gunits are given for the stage. 
+        Combining all records having the same sta-chan-begt will
+        provide calib in the calibration table.  This table can
+        describe analog or digital stages.  Each record provides
+        pointers to files which contain the actual poles/zeros or
+        digital filter coefficients.
+    }
+    ;
+
+Relation chan
+    Fields ( sta chn loc begt endt edepth hang vang flag instype nomfreq )
+    Primary ( sta chn loc begt::endt )
+    Description ( "Station-channel information" )
+    Detail {
+        This relation describes the orientation of a recording
+        channel at the site referenced by sta.  This relation
+        provides information about the various channels (e.g.  sz,
+        lz, iz ) that are available at a station and maintains a
+        record of the physical channel configuration at a site.
+    }
+    ;
+
+Relation abbrev
+    Fields ( item desc ) 
+    Primary ( item )
+    Description ( "Generic abbreviation table" )
+    Detail {
+        This relation relates item names to long form descriptions,
+        and is used to generate SEED Blockette 33.
+    }
+    ;
+
+Relation units
+    Fields ( unit desc ) 
+    Primary ( unit )
+    Description ( "Units abbreviation table" )
+    Detail {
+        This relation relates unit names to long form descriptions,
+        and is used to generate SEED Blockette 34.
+    }
+    ;
+
+Relation seedloc 
+    Fields (  sta chn begt endt seedchn loc lddate )
+    Primary (  sta chn seedchn loc begt::endt )
+    Description ( "Relation defining mapping to SEED location code" ) 
+    Detail {
+            Mapping of chn names to SEED channel+location duples
+    }       
+    ;    

@@ -1,0 +1,53 @@
+Attribute caldate
+        YearDay (8)
+        Format ( "%8d" )
+        Null ( "-1" )
+        Range ( "ondate >= 1900001&& ondate <= 2100000" )
+        Description ( "Julian cal date" )
+        Detail {
+                This attribute is the Julian Date on which the station or
+                sensor indicated was calibrated. 
+        }
+        ;
+
+Attribute caltype
+	String (3)
+	Format ( "%-3s" )
+	Null ( "-" )
+	Description ( "Calibration type" )
+	Detail {
+		This string describes type of calibration test run.
+	}
+	;
+
+Attribute sensorclass
+	String (10)
+	Format ( "%-10s" )
+	Null ( "-" )
+	Description ( "Sensor class" )
+	Detail {
+		This string describes class of sensor, primary or secondary.
+	}
+	;
+
+Attribute sta
+        String (6)
+        Format ( "%-6s" )
+        Null ( "-" )
+        Description ( "station" )
+        Detail {
+                This is the common code-name of a seismic observatory.
+                Generally only three or four characters are used.
+        }
+        ;
+
+
+Relation cals
+	Fields (  sta caldate caltype sensorclass )
+	Primary (  sta caldate caltype sensorclass )
+	Description ( "Station uptime" )
+	Detail {
+		Station calibration information.
+	}
+	;
+

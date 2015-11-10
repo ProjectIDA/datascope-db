@@ -1,0 +1,3 @@
+#
+schema /ida/dcc/db/CALS/idacals
+dbpath ./{IDA}
