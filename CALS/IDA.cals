@@ -572,6 +572,8 @@ RAYN    2014063 rb  primary
 RAYN    2014063 rb  secondary 
 RAYN    2015062 rb  primary   
 RAYN    2015062 rb  secondary 
+RAYN    2015316 rb  primary   
+RAYN    2015317 rb  secondary 
 RPN     1990151 rb  primary   
 RPN     1992344 rb  primary   
 RPN     1994043 rb  primary   
@@ -713,6 +715,7 @@ DGAR    2012078 abs -
 EFI     2011090 abs -         
 EFI     2014364 abs -         
 ERM     2012312 abs -         
+ERM     2015240 abs -         
 ESK     2010057 abs -         
 ESK     2015011 abs -         
 FFC     2013193 abs -         
@@ -721,6 +724,7 @@ HOPE    2015007 abs -
 HOPE    2015019 abs -         
 JTS     2011246 abs -         
 KAPI    2013171 abs -         
+KAPI    2015205 abs -         
 KDAK    2011186 abs -         
 KDAK    2014279 abs -         
 KDAK    2014281 abs -         
@@ -736,12 +740,14 @@ MSVF    2013320 abs -
 MSVF    2015156 abs -         
 NIL          -1 abs -         
 NNA     2011068 abs -         
+NNA     2015237 abs -         
 OBN          -1 abs -         
 PALK    2013340 abs -         
 PALK    2014186 abs -         
 PFO     2009217 abs -         
 PFO     2013304 abs -         
 RAYN    2011338 abs -         
+RAYN    2015316 abs -         
 RPN     2011103 abs -         
 SACV    2013015 abs -         
 SHEL    2013234 abs -         
