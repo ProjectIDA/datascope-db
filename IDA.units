@@ -11,4 +11,5 @@ PA               Pressure in Pascals
 T                Magnetic field in Teslas                          
 USEC             Microseconds                                      
 PERCENT          Percent                                           
+SQPCNT           Signal Quality in Percent                         
 TILT             Radian                                            
