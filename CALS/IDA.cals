@@ -182,6 +182,8 @@ DGAR    2014091 rb  primary
 DGAR    2014091 rb  secondary 
 DGAR    2015092 rb  primary   
 DGAR    2015092 rb  secondary 
+DGAR    2015345 rb  primary   
+DGAR    2015345 rb  secondary 
 EFI     1995343 rb  primary   
 EFI     1996059 rb  primary   
 EFI     2009181 rb  primary   
@@ -700,6 +702,8 @@ WRAB    2013308 rb  primary
 WRAB    2013308 rb  secondary 
 WRAB    2014309 rb  primary   
 WRAB    2014309 rb  secondary 
+WRAB    2015307 rb  primary   
+WRAB    2015307 rb  secondary 
 AAK     2014251 abs -         
 AAK     2014263 abs -         
 ABPO    2010279 abs -         
@@ -712,6 +716,7 @@ BRVK    2011153 abs -
 CMLA    2010298 abs -         
 COCO    2010301 abs -         
 DGAR    2012078 abs -         
+DGAR    2015341 abs -         
 EFI     2011090 abs -         
 EFI     2014364 abs -         
 ERM     2012312 abs -         
