@@ -319,6 +319,8 @@ JTS     2013329 rb  secondary
 JTS     2014321 rb  primary   
 JTS     2014321 rb  secondary 
 JTS     2015020 rb  secondary 
+JTS     2016049 rb  primary   
+JTS     2016049 rb  secondary 
 KAPI    1999059 rb  primary   
 KAPI    1999303 rb  primary   
 KAPI    2002017 rb  primary   
@@ -746,6 +748,7 @@ HOPE    2011074 abs -
 HOPE    2015007 abs -         
 HOPE    2015019 abs -         
 JTS     2011246 abs -         
+JTS     2016048 abs -         
 KAPI    2013171 abs -         
 KAPI    2015205 abs -         
 KDAK    2011186 abs -         
