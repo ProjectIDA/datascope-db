@@ -584,6 +584,8 @@ PFO     2014139 rb  primary
 PFO     2014139 rb  secondary 
 PFO     2015147 rb  primary   
 PFO     2015147 rb  secondary 
+PFO     2016145 rb  primary   
+PFO     2016145 rb  secondary 
 RAYN    1996263 rb  primary   
 RAYN    1997033 rb  primary   
 RAYN    2010044 rb  primary   
@@ -669,6 +671,8 @@ SUR     2014211 rb  primary
 SUR     2014211 rb  secondary 
 SUR     2015201 rb  primary   
 SUR     2015201 rb  secondary 
+SUR     2016200 rb  primary   
+SUR     2016200 rb  secondary 
 TAU     1994017 rb  primary   
 TAU     2008269 rb  primary   
 TAU     2008283 rb  primary   
@@ -759,6 +763,8 @@ ERM     2015240 abs -
 ESK     2010057 abs -         
 ESK     2015011 abs -         
 FFC     2013193 abs -         
+FFC     2014266 abs -         
+FFC     2016189 abs -         
 HOPE    2011074 abs -         
 HOPE    2015007 abs -         
 HOPE    2015019 abs -         
@@ -804,3 +810,5 @@ NIL     2014128 rb  primary
 NIL     2014128 rb  secondary 
 NIL     2015139 rb  primary   
 NIL     2015139 rb  secondary 
+NIL     2016203 rb  primary   
+NIL     2016203 rb  secondary 
