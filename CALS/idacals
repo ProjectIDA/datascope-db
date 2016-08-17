@@ -2,7 +2,7 @@ Attribute caldate
         YearDay (8)
         Format ( "%8d" )
         Null ( "-1" )
-        Range ( "ondate >= 1900001&& ondate <= 2100000" )
+        Range ( "caldate >= 1900001 && caldate <= 2100000" )
         Description ( "Julian cal date" )
         Detail {
                 This attribute is the Julian Date on which the station or
