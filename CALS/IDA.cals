@@ -804,6 +804,7 @@ RAYN    2015316 abs -
 RPN     2011103 abs -         
 SACV    2013015 abs -         
 SHEL    2013234 abs -         
+SIMI    2013234 abs -         
 SUR     2010176 abs -         
 TAU     2009233 abs -         
 TAU     2015025 abs -         
@@ -826,3 +827,5 @@ MSEY    2016236 rb  primary
 MSEY    2016236 rb  secondary 
 SHEL    2016239 rb  primary   
 SHEL    2016239 rb  secondary 
+SIMI         -1 rb  primary   
+SIMI         -1 rb  secondary 
