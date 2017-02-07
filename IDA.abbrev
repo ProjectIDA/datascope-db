@@ -28,7 +28,8 @@ M2166V Metrozet M2166-VBV Seismometer
 M2166H Metrozet M2166-VBH Seismometer                    
 Q330HR Quanterra Q330-HR digitizer                       
 GSM-90 Overhauser GSM-90 Magnetometer from GEM Systems   
-TR360  Nanometrics Trillium 360 Borehole Seismometer     
+T360BH Nanometrics Trillium 360 Borehole Seismometer     
+T360   Nanometrics Trillium Seismometer                  
 KS54A  Geotech KS-54000 (Type A) Borehole Seismometer    
 KS54B  Geotech KS-54000 (Type B) Borehole Seismometer    
 TR12PA Nanometrics Trillium 120 (Type A) Posthole BB Seis
