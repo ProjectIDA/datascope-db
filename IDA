@@ -1,2 +1,3 @@
-/ida/dcc/db/schemas/ida1.0
-./{IDA}
+#
+schema /ida/dcc/db/schemas/ida1.0
+dbpath ./{IDA}

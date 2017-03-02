@@ -1,11 +1,11 @@
-Schema ida1.0
-    Description ( "IDA Schema Version 1.0" )
-    Detail {
-        IDA DCC process control database
-    }
-    Timedate lddate
-    ;
-
+#Schema ida1.0
+#    Description ( "IDA Schema Version 1.0" )
+#    Detail {
+#        IDA DCC process control database
+#    }
+#    Timedate lddate
+#    ;
+#
 Attribute chn
     String (8)
     Format ( "%-8s" )
