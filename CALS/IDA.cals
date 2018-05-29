@@ -760,11 +760,13 @@ CMLA    2016061 abs -
 COCO    2010301 abs -         
 COCO    2014013 abs -         
 COCO    2016105 abs -         
+COCO    2018082 abs -         
 DGAR    2012078 abs -         
 DGAR    2015341 abs -         
 DGAR    2016345 abs -         
 EFI     2011090 abs -         
 EFI     2014364 abs -         
+EFI     2018062 abs -         
 ERM     2012312 abs -         
 ERM     2015240 abs -         
 ESK     2010057 abs -         
@@ -805,6 +807,7 @@ PFO     2013304 abs -
 PFO     2016051 abs -         
 RAYN    2011338 abs -         
 RAYN    2015316 abs -         
+RAYN    2018026 abs -         
 RPN     2011103 abs -         
 SACV    2013015 abs -         
 SHEL    2013234 abs -         
@@ -951,3 +954,10 @@ OBN     2018078 rb  secondary
 SIMI    2018080 rb  primary   
 COCO    2018087 rb  primary   
 COCO    2018088 rb  secondary 
+NNA     2018099 rb  secondary 
+PFO     2018137 rb  primary   
+PFO     2018137 rb  secondary 
+KWJN    2018142 rb  primary   
+KWJN    2018143 rb  secondary 
+ASCN    2018144 rb  primary   
+ASCN    2018144 rb  secondary 
