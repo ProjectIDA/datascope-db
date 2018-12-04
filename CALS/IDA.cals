@@ -970,3 +970,6 @@ BORG    2018302 rb  primary
 BORG    2018302 rb  secondary 
 JTS     2018304 rb  primary   
 JTS     2018304 rb  secondary 
+KAPI    2018330 rb  primary   
+WRAB    2018331 rb  primary   
+WRAB    2018331 rb  secondary 
