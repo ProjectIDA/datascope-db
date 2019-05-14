@@ -3,15 +3,14 @@ COUNTS           Digital Counts
 M                Displacement in Meters                            
 M/S              Velocity in Meters Per Second                     
 M/S**2           Acceleration in Meters Per Second Per Second      
-M/S/S            Acceleration in Meters Per Second Per Second      
 MS               Milliseconds                                      
 V                Volts                                             
 PA               Pressure in Pascals                               
-1                Strain                                            
+M/M              Strain                                            
 T                Magnetic field in Teslas                          
 US               Microseconds                                      
 PERCENT          Percent                                           
-TILT             Radian                                            
+RADIAN           Radian                                            
 DEGREES          Direction in Degrees                              
 MM/HR            Millimeters per hour                              
 H/CM2/HR         Hits per square cm per hour                       
