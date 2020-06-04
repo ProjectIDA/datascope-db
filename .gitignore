@@ -13,3 +13,6 @@ DMC/seed2dmc
 
 TEMP/
 ._*
+
+*.swp
+.nfs*
