@@ -11,7 +11,7 @@ T                Magnetic field in Teslas
 US               Microseconds                                      
 PERCENT          Percent                                           
 RADIAN           Radian                                            
-DEGREES          Direction in Degrees                              
+DEGREE           Direction in Degrees                              
 MM/HR            Millimeters per hour                              
 H/CM2/HR         Hits per square cm per hour                       
 C                Degrees Celsius                                   
