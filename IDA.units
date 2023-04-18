@@ -1,5 +1,5 @@
 A                Amperes                                           
-COUNTS           Digital Counts                                    
+counts           Digital Counts                                    
 M                Displacement in Meters                            
 M/S              Velocity in Meters Per Second                     
 M/S**2           Acceleration in Meters Per Second Per Second      
