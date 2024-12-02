@@ -1,4 +1,4 @@
 #
-schema /ida/dcc/db/DMC/ida2dmc
+schema /gsn/dcc/db/DMC/ida2dmc
 dbpath ./{IDA}
 
